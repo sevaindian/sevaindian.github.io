@@ -1,0 +1,95 @@
+body { font-family: 'Alegreya', serif; font-size: 16px; }
+	
+.container-fluid { width: 100%; max-width: 1120px; margin: auto; }
+
+.clear-section { height: 30px; clear: both; }
+
+h1 { font-weight: 700; }
+h2 { font-weight: 700; }
+
+.row.menu-item { margin-top: 10px; }
+.row.menu-item p { font-weight: 300; }
+.row.menu-item p strong { font-weight: 600; font-size: 1.1em; }
+
+.covidattn { text-align:center; color:#FFF; }
+	.covidattn a { color: #FFF; text-decoration: underline; transition: all 0.3s ease; }	
+		.covidattn a:hover { text-decoration: none;  }	
+
+.footer { background-color: #4f4f4f; width: 100%; }
+	.footer h3,
+	.footer p,
+	table { color: #ffffff; }
+	
+	.footer table .today { color: #f9b722; }
+	
+	.copyright { font-size: 0.85em; margin-bottom: 20px; }
+		.copyright a { color: #ffffff; text-decoration: none; }
+			.copyright a:hover { color: #ffffff; text-decoration: underline; }
+
+.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 660px; background-size: cover; background-position: center center; }
+.slide1 { background-image: url('img/seva-indian-restaurant-queens-ny-1.jpg'); } /* chicken tikka */
+.slide2 { background-image: url('img/seva-indian-restaurant-queens-ny-2.jpg'); } /* awning */
+.slide3 { background-image: url('img/seva-indian-restaurant-queens-ny-3.jpg'); } /* saag paneer */
+.slide4 { background-image: url('img/seva-indian-restaurant-queens-ny-4.jpg'); } /* ? */
+.slide5 { background-image: url('img/seva-indian-restaurant-queens-ny-10.jpg'); } /* ? */ 
+.slide6 { background-image: url('img/seva-indian-restaurant-queens-ny-6.jpg'); } /* cilantro naan */
+.slide7 { background-image: url('img/seva-indian-restaurant-queens-ny-7.jpg'); } /* table */
+
+.yaar-order h3 { line-height: 1.4em; }
+.yaar-order a { margin-top:20px; }
+
+.zagat {margin-top: 18px;}
+.google {margin-top: 14px;}
+
+    
+.hr-short {
+    height: 20px;
+    line-height: 20px;
+    margin: 30px 0;
+    float: none;
+    border-color: #e1e1e1;
+    clear: both;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.alternate_color .hr-short .hr-inner-style, .alternate_color .hr-short .hr-inner {
+    background-color: #ffffff;
+}
+.hr-inner {
+    position: absolute;
+    height: 1px;
+    top: 50%;
+    margin-top: -1px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    width: 32%; left: 50%; margin-left: -16%;
+}
+.hr-inner-style { border-radius: 20px; height: 9px; width: 9px; border-width: 1px; border-style: solid; display: block; position: absolute; left: 50%; margin-left: -5px; margin-top: -5px; background-color: #ffffff; }
+
+@media screen and (max-width: 767px) { 
+	.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 580px; }
+	.yaar-logo {  text-align: center; }
+		.yaar-logo img { max-width: 40%; }
+	.yaar-order { text-align: center; }
+	.text-right, .lunchchicken { text-align: center !important; }
+	.hourson { display: grid; justify-items:center; margin-bottom: 40px; }
+		
+}
+
+@media screen and (max-width: 660px) { 
+	.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 490px; }
+	.yaar-logo img { max-width: 40%; }
+}
+
+@media screen and (max-width: 480px) { 
+	.map-embed {display: none;}
+	.slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 370px; }
+	.yaar-logo img { max-width: 50%; }
+}
+
+.fa-fire { color: #f2515a; }
+.fa-leaf { color: #769600; }
+.allergies { font-size: 1.2em; }
+.clear50 { clear:both; height:50px; }
+.clear25 { clear:both; height:25px; }
