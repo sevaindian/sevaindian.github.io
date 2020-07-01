@@ -26,7 +26,7 @@ h2 { font-weight: 700; }
 		.copyright a { color: #ffffff; text-decoration: none; }
 			.copyright a:hover { color: #ffffff; text-decoration: underline; }
 
-.slide0 .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 660px; background-size: cover; background-position: center center; }
+.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 660px; background-size: cover; background-position: center center; }
 .slide0 { background-image: url('img/seva-indian-cuisine-nyc-outdoor-dining.jpg'); } /* outdoor dining, storefront */
 .slide1 { background-image: url('img/seva-indian-restaurant-queens-ny-1.jpg'); } /* chicken tikka */
 .slide2 { background-image: url('img/seva-indian-restaurant-queens-ny-2.jpg'); } /* awning */
