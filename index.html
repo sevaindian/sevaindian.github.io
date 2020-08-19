@@ -153,8 +153,88 @@
   				<div class="col-sm-4 breads">
   					<h2>Breads</h2>
 	  			</div>
-	  			<div class="col-sm-4 drinks">
+	  			<div class="col-sm-4">
   					<h2>Drinks</h2>
+  					<div class="row menu-item">
+	  					<div class="col-xs-10"><p><strong>Mango Lassi</strong>&nbsp;<i>churned yogurt smoothie</i></p></div>
+	  					<div class="col-xs-2 text-center"><p>4</p></div>
+	  				</div>
+	  				<div class="row menu-item">
+		  				<div class="col-xs-10"><p><strong>Lime Lemonade</strong></p></div>
+		  				<div class="col-xs-2 text-center"><p>3</p></div>
+		  			</div>
+		  			<div class="row menu-item">
+			  			<div class="col-xs-10"><p><strong>Unsweetened Iced Tea</strong></p></div>
+			  			<div class="col-xs-2 text-center"><p>3</p></div>
+			  		</div>
+			  		<div class="row menu-item">
+				  		<div class="col-xs-10"><p><strong>Sparkling Water</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>3</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+					  	<div class="col-xs-10"><p><strong>Soda</strong>&nbsp;<i>coke, diet coke, sprite, ginger ale</i></p></div>
+					  	<div class="col-xs-2 text-center"><p>2</p></div>
+					</div>
+					<div class="row menu-item">
+				  		<div class="col-xs-8"><h3>Wines</h3></div>
+				  		<div class="col-xs-2 text-center"><p style="margin-top:24px;margin-bottom:10px;">Glass</p></div>
+				  		<div class="col-xs-2 text-center"><p style="margin-top:24px;margin-bottom:10px;">Bottle</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Chardonnay</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  		<div class="col-xs-2 text-center"><p>24</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Riesling</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  		<div class="col-xs-2 text-center"><p>24</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Pinot Grigio</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>7</p></div>
+				  		<div class="col-xs-2 text-center"><p>28</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Cabernet Sauvignon</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  		<div class="col-xs-2 text-center"><p>24</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Pinot Noir</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>8</p></div>
+				  		<div class="col-xs-2 text-center"><p>32</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Shiraz</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  		<div class="col-xs-2 text-center"><p>24</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-8"><p><strong>Malbec</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  		<div class="col-xs-2 text-center"><p>24</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-10"><h3>Beers</h3></div>
+				  		<div class="col-xs-2">&nbsp;</div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-10"><p><strong>1947(Indian)</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>5</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-10"><p><strong>Kingfisher</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>6</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-10"><p><strong>Heineken</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>5</p></div>
+				  	</div>
+				  	<div class="row menu-item">
+				  		<div class="col-xs-10"><p><strong>Amstel Light</strong></p></div>
+				  		<div class="col-xs-2 text-center"><p>5</p></div>
+				  	</div>
 	  			</div>
 	  			<div class="col-sm-4 sweets">
   					<h2>Sweets</h2>
@@ -425,38 +505,33 @@
 	$.each($.parseJSON(menu), function (item, value) {
 	    if (item == "nonveg") {
 	        $.each(value, function (i, object) {
-	            $('.non-veg-menu').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.non-veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        });
 	
 	    } else if (item == "veg"){
 		   $.each(value, function (i, object) {
-	            $('.veg-menu').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        }); 
 	    } else if (item == "smallPlates"){
 		   $.each(value, function (i, object) {
-	            $('.smallPlates').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.smallPlates').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        }); 
 	    } else if (item == "SandS"){
 		   $.each(value, function (i, object) {
-	            $('.SandS').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
-	            
-	        }); 
-	    } else if (item == "drinks"){
-		   $.each(value, function (i, object) {
-	            $('.drinks').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.SandS').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        }); 
 	    } else if (item == "breads"){
 		   $.each(value, function (i, object) {
-	            $('.breads').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.breads').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        }); 
 	    } else if (item == "sweets"){
 		   $.each(value, function (i, object) {
-	            $('.sweets').append('<div class="row menu-item""><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+	            $('.sweets').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 	            
 	        }); 
 	    }
