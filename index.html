@@ -68,10 +68,12 @@
 		.clear50 { clear:both; height:50px; }
 		.clear25 { clear:both; height:25px; }   
 		
-		.covidattnCont { background-color:#FF6D6D; padding:15px 20px 6px; display: grid; grid-template-columns: 40% 60%; justify-items:center; }
+		.covidattnCont { background-color:#FF6D6D; padding:15px 20px 6px; display: grid; grid-template-columns: auto auto auto; justify-content: space-between; justify-items:center; }
 			#cnoo, #cndr { background-color: #FFFFFF; display: inline-block !important; padding: 6px 15px; color: #FF6D6D; margin-left:10px; border:2px solid #FFF; transition: all 0.3s ease; }
 				#cnoo:hover, #cndr:hover { text-decoration: none; border:2px solid #FFF; background-color: rgba(255,255,255,0); color: #FFF; }
-			.caleft, .caright { color: #FFF; }
+			.caleft, .caMid, .caright { color: #FFF; }
+			.caMid { display: grid; align-items: center; }
+			.caMid p { margin: 0 0 7px 0; padding: 0; }
 		
 		@media screen and (max-width: 767px) { 
 			.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 580px; }
@@ -80,7 +82,8 @@
 			.yaar-order { text-align: center; }
 			.text-right, .lunchchicken { text-align: center !important; }
 			.hourson { display: grid; justify-items:center; margin-bottom: 40px; }
-			.covidattnCont { grid-template-columns: auto; }		
+			.covidattnCont { grid-template-columns: 100%;  }		
+			.caMid p { margin: 6px 0 15px 0; padding: 0; }
 		}
 		
 		@media screen and (max-width: 660px) { 
@@ -116,11 +119,12 @@
 	  
 	  <div class="covidattnCont">
 		  <div class="caleft">
-			  <p><span>Contactless Take-Out or Delivery</span> <a id="cnoo" ​class='chownow-order-online'​ href='https://ordering.chownow.com/order/22584/locations' target='_blank'><i class="fa fa-shopping-bag" aria-hidden="true"></i>&nbsp;
+			  <p><a id="cnoo" ​class='chownow-order-online'​ href='https://ordering.chownow.com/order/22584/locations' target='_blank'><i class="fa fa-shopping-bag" aria-hidden="true"></i>&nbsp;
 Order Online</a></p>
 		  </div>
+		  <div class="caMid"><p style="text-align:center;">Indoor &amp; Outdoor Dining now open. Please call for reservations.</p></div>
 		  <div class="caright">
-			  <p><span>Indoor &amp; Outdoor Dining now open. Please call for reservations.</span> <a id="cndr" href="tel:+1-718-626-4440"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; (718) 626-4440</a></p>
+			  <p><a id="cndr" href="tel:+1-718-626-4440"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; (718) 626-4440</a></p>
 		  </div>
 	</div>
 	  
@@ -229,9 +233,33 @@ Order Online</a></p>
   	<section>
   		<div class="container-fluid">
   			<div class="row">
-	  			<div class="col-sm-6 smallPlates">
-	  				<h2>Appetizers</h2>
-	  			</div><!-- .6 -->
+	  			<div class="col-sm-6">
+					<h2>Appetizers</h2>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong><i class="fa fa-leaf" aria-hidden="true"></i>&nbsp;Vegetable Samosa</strong>&nbsp;<i>Potato and green pea turnover, mint and tamarind chutneys</i></p></div><div class="col-xs-2"><p>5</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Papadum</strong>&nbsp;<i>Lentil wafers</i></p></div><div class="col-xs-2"><p>3</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong><i class="fa fa-leaf" aria-hidden="true"></i>&nbsp;Pakora</strong>&nbsp;<i>Onion, cauliflower fritters, mint and tamarind chutneys</i></p></div><div class="col-xs-2"><p>7</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Chicken Samosa</strong>&nbsp;<i>Minced meat turnover, coriander, mint and tamarind chutneys</i></p></div><div class="col-xs-2"><p>6</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Chicken Malai Kabab</strong>&nbsp;<i>Earthen oven grilled dark meat, cumin-coriander paste, creamy coating</i></p></div><div class="col-xs-2"><p>8</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Lamb Spring Roll</strong>&nbsp;<i>Ground lamb, chili, coriander, mint raita</i></p></div><div class="col-xs-2"><p>8</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Seekh Kebab</strong>&nbsp;<i>Tandoor grilled spicy minced lamb sausage</i></p></div><div class="col-xs-2"><p>8</p></div>
+					</div>
+					<div class="row menu-item">
+						<div class="col-xs-10"><p><strong>Sampler Platter</strong>&nbsp;<i>Vegetable Samosa, Chicken Samosa, Pakora, Lamb Spring Roll</i></p></div><div class="col-xs-2"><p>10</p></div>
+					</div>
+				</div>
 	  			<div class="col-sm-6 SandS">
 	  				<h2>Soups &amp; Sides</h2>
 	  			</div>
@@ -638,7 +666,7 @@ Order Online</a></p>
 		    if ($today == 0){ $('.sun0').addClass('today');} else if ($today == 1){$('.mon1').addClass('today');} else if ($today == 2){$('.tue2').addClass('today');} else if ($today == 3){$('.wed3').addClass('today');} else if ($today == 4){$('.thu4').addClass('today');} else if ($today == 5){$('.fri5').addClass('today');} else {$('.sat6').addClass('today');}
 		    
      	
-			var menu='{"nonveg":[{"name": "<i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Green Chili Chicken", "desc": "Hot green chili, green pepper, garam masala, ginger-garlic sauce", "price": "15"},{"name":"Chicken Tikka Masala","desc":"Clay oven cooked white meat, tomato light cream sauce","price":"15"},{"name":"Fennel Chicken Curry","desc":"Home-style, roasted fennel seed, garlic-onion sauce","price":"15"},{"name":"Chicken Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price":"15"},{"name":"Chicken Saag","desc":"Spinach, garlic, ginger, toasted cumin, coriander","price":"15"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Chicken Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"15"},{"name":"Tandoori Chicken Tikka","desc":"Earthern oven grilled, yogurt marinade, paprika, lemon","price":"15"},{"name":"Chicken Biryani","desc":"Slow cooked basmati rice, saffron, bay leaf, cardamom, cucumber raita","price":"15"},{"name":"Lamb Rogan Josh","desc":"Cardamom-cinnamon curry sauce, cloves, nutmeg","price":"16"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Lamb Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"16"},{"name":"Lamb Saag","desc":"Spinach, peppercorns, onion, ginger, garlic, tomato","price":"16"},{"name":"Lamb Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price": "16"},{"name":"Parsi Shrimp Curry","desc":"Tamarind, ginger-garlic sauce, turmeric, cilantro","price":"18"},{"name":"Shrimp Tikka Masala","desc":"Pan seared, tomato light cream sauce","price":"18"}],"veg":[{"name":"Vegetable Tikka Masala","desc":"Sauteed mixed veggies, tomato light cream sauce","price":"14"},{"name":"Malai Kofta","desc":"Vegetable croquets, yogurt, coconut, fresh cream","price":"14"},{"name":"Saag Paneer","desc":"Spinach, homemade cheese, ginger, garlic","price":"14"},{"name":"Chana Saag","desc":"Spinach, chick pea, ginger, cardamom","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Aloo Gobi Matar","desc":"Stir-fried cauliflower, baby green pea, potato, ginger, turmeric","price":"14"},{"name":"Aloo Chana Paneer","desc":"Potato, chickpea, homemade cheese, ginger, tomato, garam masala","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Baigan Bhartha","desc":"Roasted and mashed eggplant, baby green pea, onion, tomato","price":"14"},{"name":"Navrattan Korma","desc":"Mixed vegetables, almond-cashew nut sauce, coconut","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Chana Masala","desc":"Chickpea, clove, black cardamom, onion, caraway seed","price":"14"},{"name":"Paneer Makhani","desc":"Homemade cheese, rich, buttery tomato cream sauce","price":"14"}],"smallPlates":[{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Vegetable Samosa","desc":"Potato and green pea turnover, mint and tamarind chutneys","price":"5"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Pakora","desc":"Onion, cauliflower fritters, mint and tamarind chutneys","price":"7"},{"name":"Chicken Samosa","desc":"Minced meat turnover, coriander, mint and tamarind chutneys","price":"6"},{"name":"Chicken Malai Kabab","desc":"Earthen oven grilled dark meat, cumin-coriander paste, creamy coating","price":"8"},{"name":"Lamb Spring Roll","desc":"Ground lamb, chili, coriander, mint raita","price":"8"},{"name":"Seekh Kebab","desc":"Tandoor grilled spicy minced lamb sausage","price":"8"}],"SandS":[{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Butternut Squash Soup","desc":"Nutmeg, cinnamon, tamarind","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mulligatawny Soup","desc":"Yellow lentil, black pepper, lemon","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mango Chutney","desc":"","price":"4"},{"name":"Cucumber Raita","desc":"Cool whipped yogurt","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Daal","desc":"Yellow lentil, cumin, garlic","price":"8"}],"drinks":[{"name":"Mango Lassi","desc":"churned yogurt smoothie","price":"4"},{"name":"Lime Lemonade","desc":"","price":"3"},{"name":"Unsweetened Iced Tea","desc":"","price":"3"},{"name":"Sparkling Water","desc":"","price":"3"},{"name":"Soda","desc":"coke, diet coke, sprite, ginger ale","price":"2"}],"breads":[{"name":"Plain Naan","desc":"Leavened soft flat bread, clay oven baked","price":"3"},{"name":"Naan","desc":"garlic/cilantro/cheese/coconut","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Roti","desc":"whole wheat naan","price":"3"},{"name":"Paratha","desc":"Whole wheat, butter","price":"4"}],"sweets":[{"name":"Kheer","desc":"Rice pudding, cardamom, cashew nut","price":"4"},{"name":"Rasmalai","desc":"Light cheese discs, thickened creamy milk, pistachio","price":"5"},{"name":"Gulab Jamun","desc":"Honeyed dumplings, rosewater, coconut","price":"4"}]}';
+			var menu='{"nonveg":[{"name": "<i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Green Chili Chicken", "desc": "Hot green chili, green pepper, garam masala, ginger-garlic sauce", "price": "15"},{"name":"Chicken Tikka Masala","desc":"Clay oven cooked white meat, tomato light cream sauce","price":"15"},{"name":"Fennel Chicken Curry","desc":"Home-style, roasted fennel seed, garlic-onion sauce","price":"15"},{"name":"Chicken Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price":"15"},{"name":"Chicken Saag","desc":"Spinach, garlic, ginger, toasted cumin, coriander","price":"15"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Chicken Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"15"},{"name":"Tandoori Chicken Tikka","desc":"Earthern oven grilled, yogurt marinade, paprika, lemon","price":"15"},{"name":"Chicken Biryani","desc":"Slow cooked basmati rice, saffron, bay leaf, cardamom, cucumber raita","price":"15"},{"name":"Lamb Rogan Josh","desc":"Cardamom-cinnamon curry sauce, cloves, nutmeg","price":"16"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Lamb Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"16"},{"name":"Lamb Saag","desc":"Spinach, peppercorns, onion, ginger, garlic, tomato","price":"16"},{"name":"Lamb Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price": "16"},{"name":"Parsi Shrimp Curry","desc":"Tamarind, ginger-garlic sauce, turmeric, cilantro","price":"18"},{"name":"Shrimp Tikka Masala","desc":"Pan seared, tomato light cream sauce","price":"18"}],"veg":[{"name":"Vegetable Tikka Masala","desc":"Sauteed mixed veggies, tomato light cream sauce","price":"14"},{"name":"Malai Kofta","desc":"Vegetable croquets, yogurt, coconut, fresh cream","price":"14"},{"name":"Saag Paneer","desc":"Spinach, homemade cheese, ginger, garlic","price":"14"},{"name":"Chana Saag","desc":"Spinach, chick pea, ginger, cardamom","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Aloo Gobi Matar","desc":"Stir-fried cauliflower, baby green pea, potato, ginger, turmeric","price":"14"},{"name":"Aloo Chana Paneer","desc":"Potato, chickpea, homemade cheese, ginger, tomato, garam masala","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Baigan Bhartha","desc":"Roasted and mashed eggplant, baby green pea, onion, tomato","price":"14"},{"name":"Navrattan Korma","desc":"Mixed vegetables, almond-cashew nut sauce, coconut","price":"14"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Chana Masala","desc":"Chickpea, clove, black cardamom, onion, caraway seed","price":"14"},{"name":"Paneer Makhani","desc":"Homemade cheese, rich, buttery tomato cream sauce","price":"14"}],"SandS":[{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Butternut Squash Soup","desc":"Nutmeg, cinnamon, tamarind","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mulligatawny Soup","desc":"Yellow lentil, black pepper, lemon","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mango Chutney","desc":"","price":"4"},{"name":"Cucumber Raita","desc":"Cool whipped yogurt","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Daal","desc":"Yellow lentil, cumin, garlic","price":"8"}],"drinks":[{"name":"Mango Lassi","desc":"churned yogurt smoothie","price":"4"},{"name":"Lime Lemonade","desc":"","price":"3"},{"name":"Unsweetened Iced Tea","desc":"","price":"3"},{"name":"Sparkling Water","desc":"","price":"3"},{"name":"Soda","desc":"coke, diet coke, sprite, ginger ale","price":"2"}],"breads":[{"name":"Plain Naan","desc":"Leavened soft flat bread, clay oven baked","price":"3"},{"name":"Naan","desc":"garlic/cilantro/cheese/coconut","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Roti","desc":"whole wheat naan","price":"3"},{"name":"Paratha","desc":"Whole wheat, butter","price":"4"}],"sweets":[{"name":"Kheer","desc":"Rice pudding, cardamom, cashew nut","price":"4"},{"name":"Rasmalai","desc":"Light cheese discs, thickened creamy milk, pistachio","price":"5"},{"name":"Gulab Jamun","desc":"Honeyed dumplings, rosewater, coconut","price":"4"}]}';
 
 			$.each($.parseJSON(menu), function (item, value) {
 			    if (item == "nonveg") {
@@ -650,11 +678,6 @@ Order Online</a></p>
 			    } else if (item == "veg"){
 				   $.each(value, function (i, object) {
 			            $('.veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
-			            
-			        }); 
-			    } else if (item == "smallPlates"){
-				   $.each(value, function (i, object) {
-			            $('.smallPlates').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        }); 
 			    } else if (item == "SandS"){
