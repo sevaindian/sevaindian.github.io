@@ -677,49 +677,48 @@ Order Online</a></p>
   	</footer>
   	
   
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
-    <!-- <script src="js/bootstrap.min.js"></script>  -->
     
     <script>
-	    $( document ).ready(function() {
-	    	$('#movingModal').modal('show');
+	    jQuery( document ).ready(function() {
+	    	jQuery('#movingModal').modal('show');
 		    // year for copyright date
-		    $(".year").text((new Date).getFullYear());
+		    jQuery(".year").text((new Date).getFullYear());
 	    
 		    // day of week for hours of operation
-		    var $today = new Date().getDay();
-		    if ($today == 0){ $('.sun0').addClass('today');} else if ($today == 1){$('.mon1').addClass('today');} else if ($today == 2){$('.tue2').addClass('today');} else if ($today == 3){$('.wed3').addClass('today');} else if ($today == 4){$('.thu4').addClass('today');} else if ($today == 5){$('.fri5').addClass('today');} else {$('.sat6').addClass('today');}
+		    var istoday = new Date().getDay();
+		    if (istoday == 0){ jQuery('.sun0').addClass('today');} else if (istoday == 1){jQuery('.mon1').addClass('today');} else if (istoday == 2){jQuery('.tue2').addClass('today');} else if (istoday == 3){jQuery('.wed3').addClass('today');} else if (istoday == 4){jQuery('.thu4').addClass('today');} else if (istoday == 5){jQuery('.fri5').addClass('today');} else {jQuery('.sat6').addClass('today');}
 		    
      	
 			var menu='{"nonveg":[{"name": "<i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Green Chili Chicken", "desc": "Hot green chili, green pepper, garam masala, ginger-garlic sauce", "price": "15.95"},{"name":"Chicken Tikka Masala","desc":"Clay oven cooked white meat, tomato light cream sauce","price":"15.95"},{"name":"Fennel Chicken Curry","desc":"Home-style, roasted fennel seed, garlic-onion sauce","price":"15.95"},{"name":"Chicken Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price":"15.95"},{"name":"Chicken Saag","desc":"Spinach, garlic, ginger, toasted cumin, coriander","price":"15.95"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Chicken Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"15.95"},{"name":"Tandoori Chicken Tikka","desc":"Earthern oven grilled, yogurt marinade, paprika, lemon","price":"15.95"},{"name":"Chicken Biryani","desc":"Slow cooked basmati rice, saffron, bay leaf, cardamom, cucumber raita","price":"15.95"},{"name":"Lamb Rogan Josh","desc":"Cardamom-cinnamon curry sauce, cloves, nutmeg","price":"16.95"},{"name":"<i class=\'fa fa-fire\' aria-hidden=\'true\'></i><i class=\'fa fa-fire\' aria-hidden=\'true\'></i>&nbsp;Lamb Vindaloo","desc":"Fiery sauce, sundried Kashmiri red chili, potato, tamarind","price":"16.95"},{"name":"Lamb Saag","desc":"Spinach, peppercorns, onion, ginger, garlic, tomato","price":"16.95"},{"name":"Lamb Korma","desc":"Almond and cashew nut sauce, yogurt, coconut","price": "16.95"},{"name":"Parsi Shrimp Curry","desc":"Tamarind, ginger-garlic sauce, turmeric, cilantro","price":"18.95"},{"name":"Shrimp Tikka Masala","desc":"Pan seared, tomato light cream sauce","price":"18.95"}],"veg":[{"name":"Vegetable Tikka Masala","desc":"Sauteed mixed veggies, tomato light cream sauce","price":"14.95"},{"name":"Malai Kofta","desc":"Vegetable croquets, yogurt, coconut, fresh cream","price":"14.95"},{"name":"Saag Paneer","desc":"Spinach, homemade cheese, ginger, garlic","price":"14.95"},{"name":"Chana Saag","desc":"Spinach, chick pea, ginger, cardamom","price":"14.95"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Aloo Gobi Matar","desc":"Stir-fried cauliflower, baby green pea, potato, ginger, turmeric","price":"14.95"},{"name":"Aloo Chana Paneer","desc":"Potato, chickpea, homemade cheese, ginger, tomato, garam masala","price":"14.95"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Baigan Bhartha","desc":"Roasted and mashed eggplant, baby green pea, onion, tomato","price":"14.95"},{"name":"Navrattan Korma","desc":"Mixed vegetables, almond-cashew nut sauce, coconut","price":"14.95"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Chana Masala","desc":"Chickpea, clove, black cardamom, onion, caraway seed","price":"14.95"},{"name":"Paneer Makhani","desc":"Homemade cheese, rich, buttery tomato cream sauce","price":"14.95"}],"SandS":[{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Butternut Squash Soup","desc":"Nutmeg, cinnamon, tamarind","price":"4.95"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mulligatawny Soup","desc":"Yellow lentil, black pepper, lemon","price":"4.95"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Mango Chutney","desc":"","price":"4"},{"name":"Cucumber Raita","desc":"Cool whipped yogurt","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Daal","desc":"Yellow lentil, cumin, garlic","price":"8.95"}],"drinks":[{"name":"Mango Lassi","desc":"churned yogurt smoothie","price":"4.95"},{"name":"Lime Lemonade","desc":"","price":"3"},{"name":"Unsweetened Iced Tea","desc":"","price":"3"},{"name":"Sparkling Water","desc":"","price":"3"},{"name":"Soda","desc":"coke, diet coke, sprite, ginger ale","price":"2"}],"breads":[{"name":"Plain Naan","desc":"Leavened soft flat bread, clay oven baked","price":"3"},{"name":"Naan","desc":"garlic/cilantro/cheese/coconut","price":"4"},{"name":"<i class=\'fa fa-leaf\' aria-hidden=\'true\'></i>&nbsp;Roti","desc":"whole wheat naan","price":"3"},{"name":"Paratha","desc":"Whole wheat, butter","price":"4"}],"sweets":[{"name":"Kheer","desc":"Rice pudding, cardamom, cashew nut","price":"4.95"},{"name":"Rasmalai","desc":"Light cheese discs, thickened creamy milk, pistachio","price":"5.95"},{"name":"Gulab Jamun","desc":"Honeyed dumplings, rosewater, coconut","price":"4.95"}]}';
 
-			$.each($.parseJSON(menu), function (item, value) {
+			jQuery.each(jQuery.parseJSON(menu), function (item, value) {
 			    if (item == "nonveg") {
-			        $.each(value, function (i, object) {
-			            $('.non-veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+			        jQuery.each(value, function (i, object) {
+			            jQuery('.non-veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        });
 			
 			    } else if (item == "veg"){
-				   $.each(value, function (i, object) {
-			            $('.veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+				   jQuery.each(value, function (i, object) {
+			            jQuery('.veg-menu').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        }); 
 			    } else if (item == "SandS"){
-				   $.each(value, function (i, object) {
-			            $('.SandS').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+				   jQuery.each(value, function (i, object) {
+			            jQuery('.SandS').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        }); 
 			    } else if (item == "breads"){
-				   $.each(value, function (i, object) {
-			            $('.breads').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+				   jQuery.each(value, function (i, object) {
+			            jQuery('.breads').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        }); 
 			    } else if (item == "sweets"){
-				   $.each(value, function (i, object) {
-			            $('.sweets').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
+				   jQuery.each(value, function (i, object) {
+			            jQuery('.sweets').append('<div class="row menu-item"><div class="col-xs-10"><p><strong>'+object.name+'</strong>&nbsp;<i>'+object.desc+'</i></p></div><div class="col-xs-2"><p>'+object.price+'</p></div></div>');
 			            
 			        }); 
 			    }
