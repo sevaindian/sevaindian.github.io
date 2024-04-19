@@ -35,19 +35,10 @@
 		.themenu { text-align: center; }
 		
 		.from_the_bar { margin-top: 3rem; margin-bottom: 3rem; }
-		@media (min-width:768px) {
-			.ftb_wine { margin-top:1.5rem; }
-			.ftb_age { margin-bottom: 4rem; }
-			.ftb_beer hr { width: 80%; margin-left: 0; }
-			.subsection_spacing { margin-top:3rem; }
-		}
 		
-		@media screen and (max-width:768px) {
-			.cateringTrays { width: 75%; }
-		}
-		@media screen and (max-width:640px) {
-			.cateringTrays { width: 100%; }
-		}
+		.combo_wrapper { padding-top: 3rem; padding-bottom: 3rem; }
+		
+		
 		
 		
 		.footer { background-color: #4f4f4f; width: 100%; }
@@ -83,7 +74,7 @@
 		.hr-inner { position: absolute; height: 1px; top: 50%; margin-top: -1px; border-top-width: 1px; border-top-style: solid; width: 32%; left: 50%; margin-left: -16%; }
 		.hr-inner-style { border-radius: 20px; height: 9px; width: 9px; border-width: 1px; border-style: solid; display: block; position: absolute; left: 50%; margin-left: -5px; margin-top: -5px; background-color: #ffffff; }
 	
-	.fa-fire { color: #f2515a; }
+		.fa-fire { color: #f2515a; }
 		.fa-leaf { color: #769600; }
 		
 		.covidattnCont { background-color:#FF6D6D; padding:15px 20px 6px; display: grid; grid-template-columns: auto auto; justify-content: space-between; justify-items:center; }
@@ -93,10 +84,21 @@
 			.caMid { display: grid; align-items: center; }
 			.caMid p { margin: 0 0 7px 0; padding: 0; }
 		
-		@media screen and (max-width: 767px) { 
+		
+		
+		@media (min-width:768px) {
+			.ftb_wine { margin-top:1.5rem; }
+			.ftb_age { margin-bottom: 4rem; }
+			.ftb_beer hr { width: 80%; margin-left: 0; }
+			.subsection_spacing { margin-top:3rem; }
+			.combo_wrapper { background: rgb(254,247,242); background: linear-gradient(90deg, rgba(254,247,242,1) 0%, rgba(254,247,242,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); }
+			.dinner_combo h2 { padding-left:10%; padding-right:10%; }
+		}
+		
+		@media (max-width:768px) {
+			.cateringTrays { width: 75%; }
+			.lunch_combo { background-color: rgba(254,247,242,1); }
 			.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 580px; }
-			.yaar-logo {  text-align: center; }
-				.yaar-logo img { max-width: 40%; }
 			.yaar-order { text-align: center; }
 			.text-right, .lunchchicken { text-align: center !important; }
 			.hourson { display: grid; justify-items:center; margin-bottom: 40px; }
@@ -104,15 +106,14 @@
 			.caMid p { margin: 6px 0 15px 0; padding: 0; }
 		}
 		
-		@media screen and (max-width: 660px) { 
+		@media (max-width: 660px) { 
 			.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 490px; }
-			.yaar-logo img { max-width: 40%; }
+			.cateringTrays { width: 100%; }
 		}
 		
-		@media screen and (max-width: 480px) { 
+		@media (max-width: 480px) { 
 			.map-embed {display: none;}
 			.slide0, .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7 { min-height: 370px; }
-			.yaar-logo img { max-width: 50%; }
 			.covidattnCont span { display:block; }
 			#cnoo, #cndr { margin-top: 5px; margin-left: auto; margin-right: auto; display: table !important; }
 			.caleft p, .caright p { text-align: center; }
@@ -692,16 +693,6 @@ Order Online</a></p>
 	</section>
   
   
-	<style>
-		.combo_wrapper { padding-top: 3rem; padding-bottom: 3rem; }
-		@media (min-width:768px) {
-			.combo_wrapper { background: rgb(254,247,242); background: linear-gradient(90deg, rgba(254,247,242,1) 0%, rgba(254,247,242,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); }
-			.dinner_combo h2 { padding-left:10%; padding-right:10%; }
-		}
-		@media (max-width:768px) {
-			.lunch_combo { background-color: rgba(254,247,242,1); }
-		}
-	</style>
 	<!-- LUNCH & DINNER COMBO -->
 	<div class="combo_wrapper">
 		<div class="container-fluid">
@@ -717,6 +708,7 @@ Order Online</a></p>
 						Chicken Samosa
 					</p>
 					<h4>Entrees <small>(Choose One)</small></h4>
+					<p>Served with Basmati rice</p>
 					<p><strong>Vegetarian &amp; Vegan</strong></p>
 					<p>
 						Chana Masala&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i><br>
@@ -750,11 +742,11 @@ Order Online</a></p>
 					<h2>3 Course Prix Fixe Dinner | $25</h2>
 					<h4>Appetizers <small>(Choose One)</small></h4>
 					<p>
-						Vegetable Samosa<br>
+						Vegetable Samosa&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i><br>
 						Chicken Samosa<br>
 						Lamb Spring Roll<br>
-						Butternut Squash Soup<br>
-						Mulligatawny Soup
+						Butternut Squash Soup&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i><br>
+						Mulligatawny Soup&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i>
 					</p>
 					
 					<h4>ENTREES <small>(CHOOSE ONE)</small></h4>
@@ -764,7 +756,7 @@ Order Online</a></p>
 					<p>
 						Vegetable Tikka Masala<br>
 						Vegan Vegetable Curry&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i><br>
-						Chana Masala&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i> | Aloo Gobi Matar<br>
+						Chana Masala&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i> | Aloo Gobi Matar&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i><br>
 						Chana Saag | Saag Paneer<br>
 						Navrattan Korma | Malai Kofta
 					</p>
